@@ -12,6 +12,11 @@
   text-align: left;
   text-transform: uppercase;
   color: $color-graphite-black;
+
+  @include md {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .location-content__address {
@@ -22,6 +27,16 @@
   line-height: 20px;
   text-align: left;
   color: $color-gray;
+
+  @include md {
+    font-size: 16px;
+    line-height: 20px;
+
+    span {
+      display: block;
+      margin-top: 19px;
+    }
+  }
 }
 
 .location-content {
@@ -41,6 +56,7 @@
       background-color: $color-white;
       top: 95px;
       z-index: 10;
+      padding: 60px 80px;
     }
   }
 

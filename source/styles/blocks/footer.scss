@@ -18,6 +18,11 @@
   align-items: center;
   height: 34px;
   justify-content: space-between;
+  justify-self: end;
+
+  @include md {
+    width: 168px;
+  }
 
 
   span {
@@ -59,16 +64,17 @@
 }
 
 .footer__wrapper {
-  display: grid;
-  justify-items: center;
-  grid-template-rows: repeat(3, max-content);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
 
 
   @include md() {
-    grid-template-rows: 0;
-    grid-template-columns: repeat(3, max-content);
-    align-items: center;
+    display: grid;
+    place-items: center center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content;
     justify-content: space-between;
   }
 }
@@ -77,12 +83,18 @@
   position: relative;
   width: 100%;
 
+  @include xl {
+    // display: block;
+    // width: 128px;
+    // height: 24px;
+  }
+
   &::after {
     position: absolute;
     width: 128px;
     height: 24px;
     content: "";
-    top: -10px;
+    top: 0;
     mask-image: url("../../images/logo-mobile-name.svg");
     mask-repeat: no-repeat;
     mask-size: 128px 24px;
@@ -105,4 +117,6 @@
 
 .footer__wrapper-logo {
   width: 128px;
+  height: 24px;
+  justify-self: baseline;
 }

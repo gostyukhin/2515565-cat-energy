@@ -105,7 +105,12 @@
 .header__wrapper-tablet {
   @include md() {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 94px;
+  }
+
+  @include xl {
+    justify-content: space-between;
   }
 }

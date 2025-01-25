@@ -1,13 +1,13 @@
 .instructions {
 
-  margin-bottom: 49px;
+  margin-bottom: 52px;
 
   @include md {
-    margin-bottom: 45px;
+    margin-bottom: 53px;
   }
 
   @include xl {
-    margin-bottom: 69px;
+    margin-bottom: 30px;
   }
 }
 
@@ -16,15 +16,18 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
-  text-align: center;
+  text-align: left;
   color: $color-black;
   margin-bottom: 40px;
 
   @include md() {
-    margin-bottom: 32px;
+    margin-bottom: 71px;
     font-size: 60px;
     line-height: 60px;
-    text-align: left;
+  }
+
+  @include xl {
+    margin-bottom: 73px;
   }
 }
 
@@ -47,7 +50,7 @@
 .instructions-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 19px;
 
   @include md() {
     counter-reset: myCounter;
@@ -56,12 +59,15 @@
 
   @include md() {
     flex-flow: row wrap;
-    justify-content: space-between;
+    // justify-content: space-between;
+    gap: 38px 135px;
     // gap: 94px 153px;
   }
 
   @include xl () {
     // column-gap: 94px;
+    justify-content: space-between;
+    gap: 24px;
   }
 }
 

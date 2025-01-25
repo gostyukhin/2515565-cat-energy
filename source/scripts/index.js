@@ -12,7 +12,9 @@ burgerButton.addEventListener('click', () => {
   }
 });
 
-const cardButtonShow = document.querySelector('.card__button-show');
-cardButtonShow.addEventListener('click', () => {
-  cardButtonShow.classList.toggle('card__button-show--active');
-});
+if (document.querySelector('.card__button-show')) {
+  const cardButtonShow = document.querySelector('.card__button-show');
+  cardButtonShow.addEventListener('click', () => {
+    cardButtonShow.classList.toggle('card__button-show--active');
+  });
+}

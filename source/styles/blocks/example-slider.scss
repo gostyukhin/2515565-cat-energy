@@ -7,7 +7,9 @@
   @include md() {
     background-color: $color-light-gray;
     position: relative;
-    margin-top: 250px;
+    margin-top: 215px;
+    padding-bottom: 95px;
+
 
     &::after {
       position: absolute;
@@ -31,6 +33,7 @@
   }
 
   @include xl() {
+    padding-bottom: 0;
     background: none;
     margin-top: -195px;
 
@@ -71,9 +74,16 @@
 
 .example-slider__slide {
   flex-basis: 50%;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
+
+  &--before {
+    // overflow: hidden;
+    position: absolute;
+    // top: 0;
+    // left: 0;
+  }
 }
 
 .example-slider__switch {
@@ -100,7 +110,6 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border: 2px solid $color-button-slider;

@@ -1,3 +1,15 @@
+.subscription {
+  padding-bottom: 44px;
+
+  @include md {
+    padding-bottom: 81px;
+  }
+
+  @include xl {
+    padding-bottom: 104px;
+  }
+}
+
 .subscription__title {
   font-family: $font-oswald;
   font-size: 24px;
@@ -9,10 +21,14 @@
 
   @include md {
     margin-bottom: 66px;
+    font-size: 32px;
+    line-height: 32px;
   }
 
   @include xl {
     margin-bottom: 72px;
+    font-size: 40px;
+    line-height: 40px;
   }
 }
 
@@ -24,4 +40,17 @@
   text-align: center;
   color: $color-black;
   margin-bottom: 24px;
+
+  @include md {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 632px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 23px;
+  }
+
+  @include xl {
+    max-width: 100%;
+  }
 }
