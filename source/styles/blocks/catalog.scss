@@ -1,5 +1,13 @@
 .catalog {
-  margin-bottom: 71px;
+  margin-bottom: 27px;
+
+  @include md {
+    margin-bottom: 76px;
+  }
+
+  @include xl {
+    margin-bottom: 71px;
+  }
 }
 
 .catalog__title {
@@ -9,7 +17,13 @@
   line-height: 36px;
   text-align: left;
   color: $color-black;
-  margin-bottom: 84px;
+  margin-bottom: 40px;
+
+  @include md {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 163px;
+  }
 }
 
 .catalog-list {
@@ -18,21 +32,24 @@
 
   @include md() {
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px 60px;
+    gap: 141px 60px;
   }
 
   @include xl() {
     grid-template-columns: repeat(4, 1fr);
+    gap: 143px 80px;
   }
 }
 
 .catalog__list-item {
   padding: 20px 0 25px;
   display: flex;
+  height: 209px;
   flex-direction: column;
   border-top: 1px solid rgba(235, 235, 235, 1);
 
   @include md() {
+    height: 430px;
     // max-width: 324px;
     padding: 20px 37px 25px;
     border: none;
@@ -47,6 +64,10 @@
   }
 
   a {
-    display: block;
+    display: flex;
+
+    @include md {
+      display: block;
+    }
   }
 }

@@ -1,6 +1,12 @@
 .card-show {
   align-items: center;
   border: 2px solid $color-smoky-white;
+  padding: 25px 0;
+
+  @include md {
+    padding: 50px 38px 40px;
+  }
+
 
   .card-show__title {
     font-family: $font-oswald;
@@ -10,6 +16,11 @@
     text-align: center;
     color: $color-graphite-black;
     text-transform: uppercase;
+
+    @include md {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   .card-show__subtitle {
@@ -19,14 +30,31 @@
     line-height: 16px;
     text-align: center;
     color: $color-gray;
+
+    @include md {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 }
 
 .card-show__title {
   margin-bottom: 8px;
+
+  @include md {
+    margin-bottom: 25px;
+  }
 }
 
 .card-show__info {
+  max-width: 100%;
+  width: 100%;
+
+  .card-show__title {
+    width: 100%;
+    max-width: 100%;
+  }
+
   @include md {
     max-width: 170px;
     display: block;

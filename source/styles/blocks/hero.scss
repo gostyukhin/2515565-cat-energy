@@ -1,5 +1,4 @@
 .hero {
-  // background-color: $color-green;
   padding-top: 27px;
   margin-bottom: 20px;
 
@@ -11,24 +10,7 @@
   @include xl {
     margin-bottom: 134px;
     padding-top: 0;
-
-    picture {
-      margin-top: 29px;
-    }
   }
-
-
-  // @include md() {
-  //   background: none;
-  // }
-  // background-image: linear-gradient($color-green-opacity, $color-green-opacity), url("../../images/hero-bg@1x.jpg");
-  // background: linear-gradient(rgba(255, 0, 0, 0.3)), url("../../images/hero-bg@1x.jpg");
-  // background-size: contain;
-  // background-repeat: no-repeat;
-  // background-position: top center;
-  // background-attachment: fixed;
-
-  // background-image: url("../../images/hero-bg@1x.jpg");
 
   &::after {
     position: absolute;
@@ -75,11 +57,12 @@
     font-weight: 400;
     line-height: 60px;
     text-align: left;
-    margin-left: 90px;
+    margin-left: 88px;
   }
 
   @include xl {
     padding-top: 110px;
+    margin-left: 80px;
   }
 }
 
@@ -97,8 +80,12 @@
     font-size: 20px;
     line-height: 20px;
     color: $color-black;
-    margin-left: 90px;
-    margin-bottom: 59px;
+    margin-left: 88px;
+    margin-bottom: 53px;
+  }
+
+  @include xl {
+    margin-left: 80px;
   }
 }
 
@@ -124,15 +111,16 @@
     }
 
     @include md() {
+      margin-top: -84px;
       grid-row: 4/5;
       margin-bottom: 0;
-      // margin-top: -83px;
     }
 
     @include xl() {
       grid-column: 2/3;
       grid-row: 1/4;
-      margin-left: -47px;
+      margin-left: -54px;
+      margin-top: 29px;
     }
   }
 }
@@ -144,5 +132,11 @@
     padding: 14px 0;
     margin-left: 90px;
     width: 244px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @include xl {
+    margin-left: 80px;
   }
 }

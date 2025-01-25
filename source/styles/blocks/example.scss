@@ -1,9 +1,13 @@
 .example {
   background-color: $color-light-gray;
+  padding-bottom: 58px;
+  padding-top: 25px;
 
   @include md() {
+    padding-top: 0;
     background: none;
     overflow: hidden;
+    padding-bottom: 0;
   }
 }
 
@@ -42,7 +46,7 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
-  text-align: center;
+  text-align: left;
   color: $color-black;
   margin-bottom: 40px;
 
@@ -50,7 +54,6 @@
     margin-bottom: 60px;
     font-size: 60px;
     line-height: 60px;
-    text-align: left;
   }
 
   @include xl() {
@@ -81,5 +84,16 @@
     @include xl() {
       margin-bottom: 69px;
     }
+  }
+}
+
+.example-result {
+  @include md {
+    align-self: baseline;
+    padding-top: 10px;
+  }
+
+  @include xl {
+    padding-top: 0;
   }
 }

@@ -6,6 +6,20 @@
   text-align: left;
   color: $color-dark-gray;
   text-transform: uppercase;
+  max-width: 76px;
+
+  @include md {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    max-width: 140px;
+  }
+
+  a {
+    @include xl {
+      align-self: center;
+    }
+  }
 }
 
 .card__description {
@@ -16,6 +30,11 @@
     line-height: 16px;
     text-align: center;
     color: $color-gray;
+
+    @include md {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   li {
@@ -26,32 +45,60 @@
     @include md {
       border-bottom: 1px solid $color-border-card;
     }
+
+    @include xl {
+      padding-bottom: 5px;
+    }
+  }
+
+  @include md {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin-bottom: 37px;
+  }
+
+  @include xl {
+    gap: 7px;
+    margin-bottom: 0;
   }
 }
 
 .card__wrapper {
   display: flex;
+  // flex-grow: 1;
   justify-content: space-between;
-  flex-grow: 1;
+  margin-bottom: 20px;
 
   @include md() {
+    margin-bottom: 0;
     flex-direction: column;
     align-items: center;
+    justify-content: baseline;
   }
 
-  @include xl {
+  @include md {
     >a {
+      width: 169px;
+      height: 210px;
       margin-top: -71px;
     }
   }
 }
 
 .card__info {
+  width: 140px;
+
   a {
     margin-bottom: 14px;
+    align-self: center;
 
     @include md {
       margin-bottom: 20px;
+    }
+
+    @include xl {
+      margin-bottom: 24px;
     }
   }
 
@@ -60,8 +107,17 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 32px;
-    margin-top: 22px;
+    // margin-bottom: 32px;
+    margin-top: 36px;
+  }
+
+  @include xl {
+    margin-top: 27px;
+    margin-bottom: 35px;
+
+    // &--mb {
+    //   margin-top: -5px;
+    // }
   }
 }
 
@@ -75,7 +131,7 @@
   @include md() {
     width: 60px;
     height: 60px;
-    margin-bottom: 50px;
+    margin-bottom: 12px;
   }
 
   span {
@@ -123,4 +179,30 @@
   @include md {
     margin-bottom: 0;
   }
+}
+
+// .card__link-mb {
+//   margin-bottom: -100px;
+// }
+
+.card__wrapper-link {
+  margin-bottom: -33px;
+  width: 140px;
+  height: 107px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  picture {
+    display: inline-block;
+  }
+
+  @include md {
+    width: auto;
+    height: auto;
+  }
+}
+
+.card__link {
+  justify-content: center;
 }
