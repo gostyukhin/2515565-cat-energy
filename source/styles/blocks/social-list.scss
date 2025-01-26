@@ -53,4 +53,8 @@
   &:active {
     opacity: 0.3;
   }
+
+  &:focus {
+    background-color: rgba(104, 183, 56, 1);
+  }
 }

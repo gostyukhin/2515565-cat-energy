@@ -61,6 +61,14 @@
   &:active {
     opacity: 0.3;
   }
+
+  &:focus {
+    outline: none;
+
+    &::after {
+      background-color: rgba(104, 183, 56, 1);
+    }
+  }
 }
 
 .footer__wrapper {
@@ -111,6 +119,12 @@
   &:active {
     &::after {
       background-color: rgba(107, 107, 107, 1);
+    }
+  }
+
+  &:focus {
+    &::after {
+      background-color: rgba(62, 62, 62, 1);
     }
   }
 }
