@@ -1,5 +1,6 @@
 .subscription {
   padding-bottom: 44px;
+  overflow: hidden;
 
   @include md {
     padding-bottom: 81px;
@@ -18,11 +19,33 @@
   text-align: left;
   color: $color-black;
   margin-bottom: 32px;
+  width: fit-content;
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color: rgba(104, 183, 56, 1);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    left: calc(100% + 40px);
+  }
+
+  &::after {
+    right: calc(100% + 40px);
+  }
 
   @include md {
     margin-bottom: 66px;
     font-size: 32px;
     line-height: 32px;
+    padding-left: 40px;
   }
 
   @include xl {
