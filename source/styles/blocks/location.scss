@@ -68,7 +68,24 @@
 
 
 .location__map {
+  background-image: url("../../images/location-320@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+
+
+  @include md {
+    background-image: url("../../images/location-768@2x.jpg");
+  }
+
+  @include xl {
+    background-image: url("../../images/location-1440@2x.jpg");
+  }
+
   iframe {
+    position: relative;
+    z-index: 10;
     width: 100%;
     height: 362px;
     border: none;
